@@ -7,12 +7,12 @@ crow::response greet()
 crow::response add(const crow::request &req)
 {
     auto input = crow::json::load(req.body);
-    int add = input["first"].i() + input["second"].i();
-    return crow::response{"/{/result /: /" + std::to_string(add) + "/ }"};
+    int Add = input["first"].i() + input["second"].i();
+    return crow::response{"/{/result /: /" + std::to_string(Add) + "/ }"};
 }
 crow::response subtract(const crow::request &req)
 {
     auto input = crow::json::load(req.body);
-    int sub = input["first"].i() - input["second"].i();
-    return crow::response{"/{/result /: /" + std::to_string(sub) + "/ }"};
+    int Sub = input["first"].i() - input["second"].i();
+    return crow::response{"/{/result /: /" + std::to_string(Sub) + "/ }"};
 }
